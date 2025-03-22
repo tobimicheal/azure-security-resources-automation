@@ -45,7 +45,7 @@ AzureSecurityAutomation/
 
 ✅ How to Use
 1. Clone the repository
-git clone https://github.com/your-username/azure-security-resources-automation.git
+git clone https://github.com/tobimicheal/azure-security-resources-automation
 2. Push to Azure Repos or GitHub-Azure DevOps integration
 3. Edit the pipeline if needed
    Resource group name: ade-sandbox-rg
