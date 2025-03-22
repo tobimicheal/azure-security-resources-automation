@@ -59,6 +59,7 @@ git clone https://github.com/tobimicheal/azure-security-resources-automation
 
 Once the pipeline completes successfully, you’ll see:
 
-- ✅ A **Key Vault** resource in the specified resource group
-- ✅ A **Network Security Group (NSG)** with an SSH rule visible under **“Inbound security rules”**
+- ✅ A **Key Vault** resource in the specified resource group (KeyVaultDeploymentOutput.png)
+
+- ✅ A **Network Security Group (NSG)** with an SSH rule visible under **“Inbound security rules”** (NetworkSecurityGroupOutput.png)
 
