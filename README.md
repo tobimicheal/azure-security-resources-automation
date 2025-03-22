@@ -55,9 +55,10 @@ git clone https://github.com/your-username/azure-security-resources-automation.g
    Or you can trigger it manually from Azure DevOps
 
 
-✅ Deployment Output
+### 📦 Deployment Output
 
-Once complete, you’ll see:
+Once the pipeline completes successfully, you’ll see:
 
-A Key Vault resource in the specified resource group
-A Network Security Group with an SSH rule visible under "Inbound security rules"
+- ✅ A **Key Vault** resource in the specified resource group
+- ✅ A **Network Security Group (NSG)** with an SSH rule visible under **“Inbound security rules”**
+
