@@ -1,4 +1,4 @@
-# 🚀 Azure Security Resources Automation with ARM & Bicep
+# Azure Security Resources Automation with ARM & Bicep
 
 This project automates the deployment of core security infrastructure on Microsoft Azure using **Infrastructure as Code (IaC)** principles and **Azure DevOps Pipelines**. It includes two key resources:
 
