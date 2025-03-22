@@ -26,7 +26,7 @@ AzureSecurityAutomation/
 - ✅ **Key Vault** deployed with custom name, tenant ID, and SKU
 - ✅ **NSG** includes an inbound SSH rule (port 22) for controlled remote access
 - ✅ **CI/CD Pipeline** using Azure CLI with managed identity login
-- ✅ **Hybrid IaC** using both ARM (for Key Vault) and Bicep (for NSG).
+- ✅ **Hybrid IaC** using both ARM (for Key Vault) and Bicep (for NSG)..
 
 ---
 
