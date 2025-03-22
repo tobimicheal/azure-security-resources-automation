@@ -1,0 +1,41 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+  - job: DeploySecurityResources
+    displayName: 'Deploy ARM and BICEP Security Templates'
+    steps:
+      # List files in the workspace (for debugging)
+      - script: ls -R $(System.DefaultWorkingDirectory)
+        displayName: 'List All Files in Pipeline Workspace'
+
+      # Deploy ARM Template for Key Vault
+      - task: AzureCLI@2
+        inputs:
+          azureSubscription: 'AzureDevOps-ManagedIdentity'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            echo "Deploying ARM Template for Key Vault"
+            az deployment group create \
+              --resource-group ade-sandbox-rg \
+              --template-file $(System.DefaultWorkingDirectory)/templates/keyvault-arm-template.json
+        displayName: 'Deploy ARM Template'
+
+      # Deploy BICEP Template for NSG
+      - task: AzureCLI@2
+        inputs:
+          azureSubscription: 'AzureDevOps-ManagedIdentity'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            echo "Deploying BICEP Template for NSG"
+            az deployment group create \
+              --resource-group ade-sandbox-rg \
+              --template-file $(System.DefaultWorkingDirectory)/templates/nsg-bicep-template.bicep
+        displayName: 'Deploy BICEP Template'
